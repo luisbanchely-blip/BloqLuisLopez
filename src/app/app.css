@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap');
+
+:host {
+	--bg: #e9e2dc;
+	--surface: #ece6e1;
+	--text: #212025;
+	--muted: #4a464c;
+	--line: #7f7973;
+
+	display: block;
+	min-height: 100dvh;
+	background: var(--bg);
+	color: var(--text);
+}
+
+.blog-shell {
+	max-width: 1500px;
+	margin: 0 auto;
+	padding: 2.2rem 2rem 2.6rem;
+	font-family: Montserrat, sans-serif;
+}
+
+.top-nav {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	align-items: center;
+	gap: 0.8rem;
+	margin: 0 auto 2rem;
+	max-width: 1020px;
+}
+
+.top-nav button {
+	display: block;
+	text-align: center;
+	padding: 0.5rem;
+	background: transparent;
+	border: 0;
+	font-size: clamp(0.9rem, 1.8vw, 2rem);
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	color: var(--text);
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: opacity 160ms ease;
+}
+
+.top-nav button:hover {
+	opacity: 0.65;
+}
+
+.top-nav button:focus-visible {
+	outline: 3px solid rgb(0 0 0 / 18%);
+	outline-offset: 2px;
+}
+
+.top-link--active {
+	text-decoration: underline;
+	text-underline-offset: 0.3em;
+}
+
+.profile-card {
+	display: grid;
+	grid-template-columns: 1.25fr minmax(320px, 560px);
+	min-height: 520px;
+	border: 2px solid var(--line);
+	background: var(--surface);
+	overflow: hidden;
+}
+
+.profile-copy {
+	padding: clamp(1.6rem, 4vw, 4.2rem);
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	gap: 0.8rem;
+}
+
+h1 {
+	margin: 0;
+	font-size: clamp(1.7rem, 4.6vw, 3.4rem);
+	line-height: 1;
+	letter-spacing: -0.02em;
+	font-weight: 800;
+	max-width: 12ch;
+}
+
+.profile-subtitle {
+	margin: 0;
+	max-width: 62ch;
+	font-size: clamp(0.95rem, 1.3vw, 1.15rem);
+	line-height: 1.5;
+	color: var(--muted);
+	font-weight: 600;
+}
+
+.profile-paragraph,
+.profile-closing,
+.profile-tech-line {
+	margin: 0;
+	max-width: 68ch;
+	font-size: clamp(0.84rem, 1.2vw, 1rem);
+	line-height: 1.48;
+	font-weight: 500;
+	color: #2f2d33;
+}
+
+.profile-tech-title {
+	margin: 0.15rem 0 0;
+	font-size: 0.82rem;
+	font-weight: 800;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+.profile-photo {
+	margin: 0;
+	min-height: 100%;
+}
+
+.profile-photo img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.content-area {
+	margin-top: 1.15rem;
+	padding-top: 1.15rem;
+	border-top: 1px solid color-mix(in srgb, var(--line) 45%, transparent);
+}
+
+.experience-banner {
+	margin: 0 0 1rem;
+	border: 1px solid color-mix(in srgb, var(--line) 60%, transparent);
+	background: rgb(255 255 255 / 35%);
+	overflow: hidden;
+}
+
+.experience-banner img {
+	display: block;
+	width: 100%;
+	height: auto;
+	max-height: 480px;
+	object-fit: contain;
+	background: #f4efea;
+}
+
+.company-tabs {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.55rem;
+	margin-bottom: 0.72rem;
+}
+
+.company-tab {
+	border: 1px solid var(--line);
+	background: transparent;
+	color: var(--muted);
+	padding: 0.56rem 0.85rem;
+	font: 600 0.74rem/1 Montserrat, sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	cursor: pointer;
+	transition: all 140ms ease;
+}
+
+.company-tab:hover {
+	background: rgb(255 255 255 / 35%);
+	color: var(--text);
+}
+
+.company-tab:focus-visible {
+	outline: 3px solid rgb(0 0 0 / 18%);
+	outline-offset: 2px;
+}
+
+.company-tab--active {
+	background: #2d2a2f;
+	border-color: #2d2a2f;
+	color: #f6f3ef;
+}
+
+.company-panel {
+	border: 1px solid color-mix(in srgb, var(--line) 60%, transparent);
+	background: rgb(255 255 255 / 30%);
+	padding: 1rem;
+}
+
+.contact-card {
+	border: 1px solid color-mix(in srgb, var(--line) 60%, transparent);
+	background: rgb(255 255 255 / 30%);
+	padding: 1.2rem;
+	max-width: 920px;
+	margin: 0 auto;
+}
+
+.contact-card h2 {
+	margin: 0;
+	font-size: clamp(1.15rem, 2vw, 1.7rem);
+	font-weight: 800;
+}
+
+.contact-card p {
+	margin-top: 0.8rem;
+}
+
+.contact-card ul {
+	margin-top: 0.85rem;
+}
+
+.panel-head {
+	display: flex;
+	justify-content: space-between;
+	gap: 0.7rem;
+	align-items: baseline;
+	padding-bottom: 0.65rem;
+	border-bottom: 1px solid color-mix(in srgb, var(--line) 45%, transparent);
+}
+
+h2 {
+	margin: 0;
+	font-size: clamp(1.05rem, 2vw, 1.45rem);
+	font-weight: 700;
+}
+
+.periodo {
+	margin: 0;
+	font-size: 0.82rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	color: var(--muted);
+}
+
+.info-block {
+	margin-top: 0.9rem;
+}
+
+h3 {
+	margin: 0 0 0.38rem;
+	font-size: 0.76rem;
+	font-weight: 700;
+	letter-spacing: 0.09em;
+	text-transform: uppercase;
+	color: var(--muted);
+}
+
+p,
+li {
+	margin: 0;
+	font-size: 0.93rem;
+	line-height: 1.52;
+	font-weight: 500;
+	color: #2f2d33;
+}
+
+ul {
+	margin: 0;
+	padding-inline-start: 1.2rem;
+}
+
+li + li {
+	margin-top: 0.26rem;
+}
+
+.tech-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.42rem;
+}
+
+.tech-chip {
+	padding: 0.35rem 0.58rem;
+	border: 1px solid color-mix(in srgb, var(--line) 55%, transparent);
+	font-size: 0.74rem;
+	font-weight: 600;
+	background: rgb(255 255 255 / 42%);
+}
+
+.awards,
+.about-closing {
+	padding-top: 0.75rem;
+	border-top: 1px solid color-mix(in srgb, var(--line) 40%, transparent);
+}
+
+.about-paragraph + .about-paragraph {
+	margin-top: 0.6rem;
+}
+
+@media (max-width: 1020px) {
+	.blog-shell {
+		padding: 1.2rem 0.9rem 2rem;
+	}
+
+	.profile-card {
+		grid-template-columns: 1fr;
+		min-height: unset;
+	}
+
+	.profile-photo {
+		max-height: 520px;
+	}
+
+	h1,
+	.profile-subtitle {
+		max-width: 100%;
+	}
+}
+
+@media (max-width: 720px) {
+	.top-nav {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		margin-bottom: 1.2rem;
+	}
+
+	.top-nav button {
+		font-size: 1rem;
+	}
+}
